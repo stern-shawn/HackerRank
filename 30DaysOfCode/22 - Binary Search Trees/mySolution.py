@@ -22,17 +22,17 @@ class Solution:
         # tracking edges instead of number of nodes as depth
         if curr.left is None and curr.right is None:
             return 0
-            # Case where only one child exists for this node, get that child's
-            # height and increment by the edge that exists between this and the
-            # child
+        # Case where only one child exists for this node, get that child's
+        # height and increment by the edge that exists between this and the
+        # child
         elif curr.left is None and curr.right is not None:
             return 1 + self.getHeight(curr.right)
-            # Same case as above for child on other side
+        # Same case as above for child on other side
         elif curr.left is not None and curr.right is None:
             return 1 + self.getHeight(curr.left)
+        # Case where current node has two children, return the largest
+        # plus the edge that exists between the child and his node
         else:
-            # Case where current node has two children, return the largest
-            # plus the edge that exists between the child and his node
             return 1 + max(self.getHeight(curr.left), self.getHeight(curr.right))
 
 T=int(input())
