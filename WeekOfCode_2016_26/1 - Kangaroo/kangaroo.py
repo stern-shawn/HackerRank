@@ -2,9 +2,7 @@
 
 import sys
 
-
-x1,v1,x2,v2 = input().strip().split(' ')
-x1,v1,x2,v2 = [int(x1),int(v1),int(x2),int(v2)]
+x1,v1,x2,v2 = map(int, input().strip().split(' '))
 
 # Solve the equation x1 + v1 * t = x2 + v2 * t, and make sure we have a
 # positive integer result since kangaroos can't travel in partial jumps...
